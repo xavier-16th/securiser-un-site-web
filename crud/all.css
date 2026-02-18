@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --spotify-black: #121212;
+  --spotify-dark-gray: #212121;
+  --spotify-gray: #535353;
+  --spotify-light-gray: #b3b3b3;
+  --spotify-green: #1DB954;
+  --spotify-white: #FFFFFF;
+  --spotify-hover-green: #1ed760;
+}
+
+.link_container {
+  margin-bottom: 20px;
+}
+
+.link {
+  background-color: var(--spotify-green);
+  padding: 12px 24px;
+  color: var(--spotify-black);
+  border-radius: 500px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: var(--spotify-hover-green);
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--spotify-white);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--spotify-black);
+  min-height: 100vh;
+  width: 100%;
+  color: var(--spotify-white);
+}
+
+main {
+  width: 80%;
+  max-width: 1200px;
+  padding: 30px;
+  background-color: var(--spotify-dark-gray);
+  border-radius: 8px;
+}
+
+img {
+  width: 40px;
+  text-align: center;
+}
+
+.statut {
+  height: 10px;
+}
+
+th {
+  text-align: left;
+  background-color: var(--spotify-gray);
+  color: var(--spotify-white);
+  font-weight: 600;
+  padding: 16px 20px;
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: var(--spotify-light-gray);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: var(--spotify-white);
+}
+
+table {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+table a {
+  text-align: center;
+  color: var(--spotify-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+table a:hover {
+  color: var(--spotify-hover-green);
+  text-decoration: underline;
+}
+
+.image {
+  text-align: center;
+}
+
+table tr {
+  background-color: var(--spotify-dark-gray);
+  border-bottom: 1px solid var(--spotify-gray);
+  transition: background-color 0.2s ease;
+}
+
+table tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  color: var(--spotify-light-gray);
+}
+
+.message {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 16px 0;
+  color: var(--spotify-white);
+  background-color: var(--spotify-gray);
+}
+
+form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--spotify-dark-gray);
+  padding: 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+form input {
+  margin: 10px 0;
+  padding: 14px;
+  border: none;
+  background-color: var(--spotify-black);
+  border-radius: 4px;
+  outline: 0;
+  color: var(--spotify-white);
+}
+
+form input::placeholder {
+  color: var(--spotify-light-gray);
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 500px;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--spotify-hover-green);
+  transform: scale(1.02);
+}
+
+.back {
+  padding: 14px;
+  text-align: center;
+  border-radius: 500px;
+  margin-top: 16px;
+  background-color: transparent;
+  border: 1px solid var(--spotify-light-gray);
+  color: var(--spotify-white);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.back:hover {
+  border-color: var(--spotify-white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+  }
+  
+  table {
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  table caption {
+    font-size: 1.2em;
+  }
+  
+  table thead {
+    display: none;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: var(--spotify-dark-gray);
+  }
+  
+  table td {
+    border-bottom: 1px solid var(--spotify-gray);
+    display: block;
+    font-size: 0.9em;
+    padding: 12px;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: var(--spotify-green);
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+  
+  .image {
+    text-align: left;
+  }
+}
